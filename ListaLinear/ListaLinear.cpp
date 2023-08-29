@@ -1,4 +1,4 @@
-
+//Pietro Fortunato
 #include <iostream>
 using namespace std;
 
@@ -122,6 +122,21 @@ void inserirElemento()
 
 void excluirElemento()
 {
+	int valor, index, penElemento, loop;
+	cout << "Digite o valor para excluir: " << endl;
+	cin >> valor;
+	index = posicaoElemento(valor);
+
+	if (index != -1) {
+		penElemento = nElementos - 1;
+		for (loop = index; loop <penElemento ; loop++) {
+			lista[loop] = lista[loop + 1];
+		}
+		nElementos = nElementos--;
+	}
+	else {
+		cout << "O valor nao foi encontrado" << endl;
+	}
 
 
 }
